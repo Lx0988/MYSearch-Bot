@@ -5,7 +5,7 @@ from bot import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
 from bot.database.users_chats_db import db
 from bot.database.ia_filterdb import Media
 from bot.database import get_size, temp, get_settings
-from translation import script
+from bot.translation import script
 from pyrogram.errors import ChatAdminRequired
 
 """-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
