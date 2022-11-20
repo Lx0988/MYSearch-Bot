@@ -1,14 +1,11 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from bot import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
+from bot import ADMINS, SUPPORT_CHAT
 from bot.database.users_chats_db import db
 from bot.database.ia_filterdb import Media
-from bot.database import get_size, temp, get_settings
+from bot.database import get_size, temp
 from bot.translation import script
-from pyrogram.errors import ChatAdminRequired
-
-"""-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
