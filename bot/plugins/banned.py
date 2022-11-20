@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from bot.lx.utils import temp
+from bot.database import temp
 from pyrogram.types import Message
 from bot.database.users_chats_db import db
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
