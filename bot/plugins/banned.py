@@ -1,8 +1,3 @@
-from pyrogram import Client, filters
-from bot import CHANNELS
-from bot.database.ia_filterdb import save_file
-
-
 import datetime
 import time
 import asyncio
@@ -82,24 +77,3 @@ async def verupikkals(bot, message):
             await sts.edit(f"Broadcast in progress:\n\nTotal Users {total_users}\nCompleted: {done} / {total_users}\nSuccess: {success}\nBlocked: {blocked}\nDeleted: {deleted}")    
     time_taken = datetime.timedelta(seconds=int(time.time()-start_time))
     await sts.edit(f"Broadcast Completed:\nCompleted in {time_taken} seconds.\n\nTotal Users {total_users}\nCompleted: {done} / {total_users}\nSuccess: {success}\nBlocked: {blocked}\nDeleted: {deleted}")
-
-#from pyrogram import Client, filters
-#from bot import CHANNELS
-#from bot.database.ia_filterdb import save_file
-
-
-
-media_filter = filters.document | filters.video | filters.audio
-
-@Client.on_message(filters.chat(CHANNELS) & media_filter)
-async def media(bot, message):
-    """Media Handler"""
-    for file_type in ("document", "video", "audio"):
-        media = getattr(message, file_type, None)
-        if media is not None:
-            break
-    else:
-        return
-    media.file_type = file_type
-    media.caption = message.caption
-    await save_file(media)
