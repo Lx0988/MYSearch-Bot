@@ -2,7 +2,7 @@ import asyncio
 import datetime
 import time
 from pyrogram import Client, filters
-from bot.database import temp, broadcast_messages
+from bot.database import temp, broadcast_messages, media_filter
 from pyrogram.types import Message
 from bot.database.users_chats_db import db
 from bot.database.ia_filterdb import save_file
