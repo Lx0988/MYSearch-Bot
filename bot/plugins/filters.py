@@ -8,9 +8,9 @@ from bot.database.filters_mdb import(
    count_filters
 )
 
-from database.connections_mdb import active_connection
-from utils import get_file_id, parser, split_quotes
-from info import ADMINS
+from bot.database.connections_mdb import active_connection
+from bot.database import get_file_id, parser, split_quotes
+from bot import ADMINS
 
 
 @Client.on_message(filters.command(['filter', 'add']) & filters.incoming)
