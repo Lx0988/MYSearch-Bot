@@ -201,12 +201,12 @@ async def delete_all_index(bot, message):
 @Client.on_message(filters.command('commands') & filters.user(ADMINS))
 async def commands(bot, message):
     commands = """ <b>Commands and Usage:</b>
-  • /logs - <code>to get the rescent errors</code>
-  • /stats - <code>to get status of files in db.</code>
-  • /delete - <code>to delete a specific file from db.</code>
-  • /users - <code>to get list of my users and ids.</code>
-  • /ban  - <code>to ban a user.</code>
-  • /unban  - <code>to unban a user.</code>
-  • /channel - <code>to get list of total connected channels</code>
-  • /broadcast - <code>to broadcast a message to all users</code>"""
+• /logs - <code>to get the rescent errors</code>
+• /stats - <code>to get status of files in db.</code>
+• /delete - <code>to delete a specific file from db.</code>
+• /users - <code>to get list of my users and ids.</code>
+• /ban  - <code>to ban a user.</code>
+• /unban  - <code>to unban a user.</code>
+• /channel - <code>to get list of total connected channels</code>
+• /broadcast - <code>to broadcast a message to all users</code>"""
     await message.reply_text(commands)
