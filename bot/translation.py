@@ -1,8 +1,8 @@
 class script(object):
 
     START_TXT = """**Hi, I'm Media Search bot**
-• Join update channel to use this bot. @DFF_UPDATES
 
+• Join update channel to use this bot. @DFF_UPDATES
 • Here you can search files in inline mode. Just press follwing buttons and start searching.
 """
 
