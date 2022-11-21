@@ -42,8 +42,9 @@ async def start(client, message):
             InlineKeyboardButton('👤 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(script.START_TXT),                       
-            reply_markup=reply_markup,
+        await message.reply_text(                       
+            script.START_TXT,
+            reply_markup=reply_markup,            
             parse_mode=enums.ParseMode.HTML
         )
         return
@@ -83,7 +84,8 @@ async def start(client, message):
             InlineKeyboardButton('👤 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(script.START_TXT),                       
+        await message.reply_text(
+            script.START_TXT,                       
             reply_markup=reply_markup,           
             parse_mode=enums.ParseMode.HTML
         )
