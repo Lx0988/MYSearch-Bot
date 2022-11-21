@@ -7,6 +7,10 @@ from bot.database import  temp, get_settings, save_group_settings
 from bot.database.users_chats_db import db
 from bot.database.ia_filterdb import Media
 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+
+BUTTONS = {}
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
