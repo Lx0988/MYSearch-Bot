@@ -11,7 +11,7 @@ from pyrogram.errors import ChatAdminRequired
 """-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
 
 
-@Client.on_message(filters.command('stats') & filters.incoming)
+@Client.on_message(filters.command('stats') & filters.user(ADMINS))
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
     total_users = await db.total_users_count()
