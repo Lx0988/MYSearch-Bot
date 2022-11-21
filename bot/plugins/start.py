@@ -1,11 +1,11 @@
-import os, logging, random, asyncio
+import os, logging, asyncio
 from bot.translation import script
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from bot.database.ia_filterdb import Media, unpack_new_file_id
 from bot.database.users_chats_db import db
-from bot import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS
+from bot import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL
 from bot.database import is_subscribed, temp
 import re
 logger = logging.getLogger(__name__)
