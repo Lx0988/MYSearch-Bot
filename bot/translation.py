@@ -23,3 +23,9 @@ class script(object):
 ID - <code>{}</code>
 Name - {}
 """
+
+
+    STATUS_TXT = """• Total Files: <code>{}</code>
+• Total Users: <code>{}</code>
+• Used Storage: <code>{}</code> MiB
+• Free Storage: <code>{}</code> MiB"""
