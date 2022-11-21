@@ -1,5 +1,5 @@
 # @OAIB
-from .bot import Bot
+from bot.lx_bot import Bot
 
 app = Bot()
 app.run()
