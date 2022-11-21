@@ -25,7 +25,8 @@ import logging
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
-    elif query.data == "pages":
+
+    if query.data == "pages":
         await query.answer()
     elif query.data == "start":
         buttons = [[
