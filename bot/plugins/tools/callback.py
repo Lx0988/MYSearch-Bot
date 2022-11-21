@@ -3,9 +3,7 @@ import pyrogram
 from bot.translation import script
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
-from bot.database import  temp, get_settings, save_group_settings, get_size
-from bot.database.users_chats_db import db
-from bot.database.ia_filterdb import Media
+from bot.database import temp
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -39,7 +37,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+            text=script.ABOUT_TXT.format(temp.U_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )   
