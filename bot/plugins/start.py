@@ -203,7 +203,7 @@ async def delete_all_index(bot, message):
 
 
 
-@Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
+@Client.on_message(filters.command('commands') & filters.user(ADMINS))
 async def commands(bot, message):
     commands = """ <b>Commands and Usage:</b>
     • /logs - <code>to get the rescent errors</code>
