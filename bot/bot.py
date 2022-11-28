@@ -16,7 +16,7 @@ from bot.database import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from aiohttp import web
-from plugins import web_server
+from bot.plugins import web_server
 
 PORT = "8080"
 
